@@ -1,0 +1,176 @@
+@import 'config';
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 375px;
+    height: 100%;
+    margin: 0 2rem;
+    background-color: $primary-card-background;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    @include media-lg {
+        max-width: 1240px;  
+        margin: 0 12rem;
+
+        flex-direction: row-reverse;
+        
+    }
+
+
+
+    .card-img {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 0;
+            display: block;
+            padding-top: calc((480/654)*100%);
+
+            @include media-lg {
+                padding-top: ((446/540)*100%);
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            background-color: $primary-accent;
+            opacity: 0.3;
+            
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+
+    }
+
+    .card-info {
+        width: 100%;
+        padding: 3.5rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-lg {
+            align-self: flex-start;
+            justify-content: center;
+            padding: 7rem 12rem 0 8rem;
+        }
+
+        .info__title {
+            color: $neutral-main;
+            font-size: 3rem;
+            text-align: center;
+            padding-bottom: 2rem;
+
+            span {
+                color: $primary-accent;
+            }
+
+            @include media-lg {
+                font-size: 4rem;
+                text-align: left;
+                padding-bottom: 3rem;
+
+            }
+        }
+
+        .info__parag {
+            color: $neutral-text;
+            font-size: 1.6rem;
+            text-align: center;
+            line-height: 1.7;
+            padding-bottom: 4rem;
+
+            @include media-lg {
+                text-align: left;
+                font-size: 1.7rem;
+                padding-right: 4rem;
+                padding-bottom: 5rem;
+
+            }
+        }
+
+
+        .info__box {
+
+            @include media-lg {
+                display: flex;
+                align-self: flex-start;
+            }
+
+            .data {
+
+                text-align: center;
+                padding-bottom: 2.2rem;
+
+                @include media-lg {
+                    text-align: left;
+                    padding-right: 10rem;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+    
+                }
+
+                .data-title {
+                    color: $neutral-main;
+                    font-size: 2.5rem;
+                    padding-bottom: 1rem;
+
+                    @include media-lg {
+                        font-size: 2rem;
+        
+                    }
+                }
+
+                .data-info {
+                    color: $neutral-stat;
+                    font-size: 1.6rem;
+                    letter-spacing: 0.1rem;
+
+                    @include media-lg {
+                        font-size: 1rem;
+
+
+        
+                    }
+                }
+            }
+        }
+
+
+    }
+}

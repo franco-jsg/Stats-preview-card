@@ -1,0 +1,215 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Inter;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  margin: 0 2rem;
+  background-color: #1b1938;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    max-width: 1240px;
+    margin: 0 12rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.card .card-img {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.card .card-img::before {
+  content: '';
+  width: 100%;
+  height: 0;
+  display: block;
+  padding-top: calc((480/654)*100%);
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-img::before {
+    padding-top: 82.59259%;
+  }
+}
+
+.card .card-img::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #aa5cdb;
+  opacity: 0.3;
+}
+
+.card .card-img .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card-info {
+  width: 100%;
+  padding: 3.5rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 7rem 12rem 0 8rem;
+  }
+}
+
+.card .card-info .info__title {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.card .card-info .info__title span {
+  color: #aa5cdb;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__title {
+    font-size: 4rem;
+    text-align: left;
+    padding-bottom: 3rem;
+  }
+}
+
+.card .card-info .info__parag {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.7;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__parag {
+    text-align: left;
+    font-size: 1.7rem;
+    padding-right: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.card .card-info .info__box .data {
+  text-align: center;
+  padding-bottom: 2.2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__box .data {
+    text-align: left;
+    padding-right: 10rem;
+  }
+  .card .card-info .info__box .data:last-child {
+    padding-right: 0;
+  }
+}
+
+.card .card-info .info__box .data .data-title {
+  color: white;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__box .data .data-title {
+    font-size: 2rem;
+  }
+}
+
+.card .card-info .info__box .data .data-info {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card .card-info .info__box .data .data-info {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

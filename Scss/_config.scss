@@ -1,0 +1,32 @@
+// VARIABLES
+
+$primary-main-background: hsl(233, 47%, 7%);
+$primary-card-background: hsl(244, 38%, 16%);
+$primary-accent: hsl(277, 64%, 61%);
+
+
+$neutral-main: hsl(0, 0%, 100%); //main heading & stats
+$neutral-text: hsla(0, 0%, 100%, 0.75); // paragraph
+$neutral-stat: hsla(0, 0%, 100%, 0.6); // stat heading
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+body {
+    background-color: $primary-main-background;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1440px) {
+        @content
+    }
+}
+
